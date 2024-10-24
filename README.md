@@ -3,13 +3,15 @@ Univariate linear regression with gradient descent and non-vectorized code.
 
 This jupyter notebook takes a set of inputs (x = features[], y = targets[])
 and optimizes a cost function J of a univariate linear regression model y=wx+b,
-J(w,b) = 1/2m * sum from i=1 to i=m of (f(x(i))-y(i)^2), using the algorithm:
+where J(w,b) = 1/2m * sum from i=1 to i=m of (f(x(i))-y(i)^2), using the algorithm:
 
 repeat until convergence{
+
 w = w-alpha(d/dw)J(w,b)
 b = b-alpha(d/db)J(w,b)
 
 note:simultaneously update w and b
+
 }
 
 It seems to work pretty well, I had to normalize the features matrix because I had
